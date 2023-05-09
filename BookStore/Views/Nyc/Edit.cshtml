@@ -9,11 +9,14 @@
 
     <form method="post" asp-controller="Nyc" asp-action="Edit">
         <div class="mb-3">
+            <lable class="form-label">Id</lable>
+            <input type="text" class="form-control" asp-for="Id" />
+            
             <lable class="form-label">Username</lable>
-            <input type="number" class="form-control" asp-for="Username" />
+            <input type="text" class="form-control" asp-for="Username" />
 
             <lable class="form-label">Password</lable>
-            <input type="password" class="form-control" asp-for="Password" />
+            <input type="text" class="form-control" asp-for="Password" />
 
             <div class="mb-3">
                 <lable for="for">Name</lable>
