@@ -1,0 +1,40 @@
+﻿@model MyNyc
+@{
+    ViewData["Title"] = "Add";
+}
+
+<h1>Add</h1>
+<body style=" background-color :goldenrod">
+
+
+    <form method="post" asp-controller="Nyc" asp-action="Add">
+        <div class="mb-3">
+            <lable class="form-label">Username</lable>
+            <input type="text" class="form-control" asp-for="Username" />
+            <div class="mb-3">
+                <lable class="form-label">Password</lable>
+                <input type="password" class="form-control" asp-for="Password" />
+            </div>
+            <div class="mb-3">
+                <lable for="for">Name</lable>
+                <input type="text" class="form-control" asp-for="Name" />
+            </div>
+                
+                <div class="mb-3">
+                    <label for="location">Location</label>
+
+                    <select name="location" id="location" asp-for="Location">
+                        <option value="Hyderabad">Hyderabad</option>
+                        <option value="Mumbai">Mumbai</option>
+                        <option value="Gujarath">Gujarath</option>
+                        <option value="Bangalore">Bangalore</option>
+                    </select>
+                </div>
+            </div>
+            <div class="mb-3">
+                <button type="submit" class="btn btn-primary" me-3>Add</button>
+            </div>
+        </div>
+        
+    </form>
+</body>

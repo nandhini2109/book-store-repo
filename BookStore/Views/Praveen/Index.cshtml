@@ -1,0 +1,14 @@
+﻿@model IEnumerable<MyPraveen>
+@{
+    ViewData["Title"] = "Index";
+}
+
+<h1>welcome to praveen page</h1>
+<div>
+    @foreach (var eg in Model)
+    {
+        <h3>NAME IS @eg.Name</h3>
+        <h3>Rull Number is @eg.Rullnumber</h3>
+    }
+
+</div>

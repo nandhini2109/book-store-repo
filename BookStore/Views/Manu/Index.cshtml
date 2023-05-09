@@ -1,0 +1,18 @@
+﻿
+@{
+    ViewData["Title"] = "Home page";
+}
+@model BookStore.Models.ManuViewModel
+
+<form method ="post"asp-controller="Manu"asp-action="Update">
+    <div class ="mb-3">
+        <lable class="form-label">Name</lable>
+        <input type ="text"class="form-control"asp-for="Name"/>
+    </div>
+
+    <div class ="mb-3">
+        <button type ="submit"class="btn btn-primary"me-3>Update</button>
+
+    </div>
+</form>
+

@@ -1,0 +1,34 @@
+﻿@model MyPractice
+@{
+    ViewData["Title"] = "Edit";
+}
+
+<body style=" background-color :greenyellow">
+
+    <h1>Delete practice item </h1>
+
+    <form method="post" asp-controller="Practice" asp-action="Delete">
+        <div class="mb-3">
+            <lable class="form-label">Id</lable>
+            <input type="text" class="form-control" asp-for="Id" disabled />
+           
+            <lable class="form-label">Name</lable>
+            <input type="text" class="form-control" asp-for="Name" disabled />
+
+            <lable class="form-label">Inadian</lable>
+            <input type="text" class="form-control" asp-for="Indian" disabled />
+
+            <lable class="form-label">Height</lable>
+            <input type="text" class="form-control" asp-for="Height" disabled />
+           
+        </div>
+
+        <div class="mb-3">
+            <button type="submit" class="btn btn-primary" me-3>Delete</button>
+            <a class="btn btn-primary" asp-controller="Practice" asp-action="Index"> Back to index page </a>
+
+        </div>
+    </form>
+</body>
+
+

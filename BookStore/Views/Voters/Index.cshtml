@@ -1,0 +1,47 @@
+﻿
+
+@model IEnumerable<Voters>
+@{
+    ViewData["Title"] = "Index";
+}
+
+<h1>IndexCategory</h1>
+
+<table class="table table-bordered table-striped" style="width:100%">
+    <thead>
+        <tr>
+            <th style="background-color:green">
+                Name
+            </th>
+            <th style="background-color:antiquewhite">
+                Village
+                
+            </th>
+            <th style="background-color:brown">
+                Adhar
+            </th>
+        </tr>
+    </thead>
+    <body>
+       
+        @foreach (var obj in Model)
+        {
+    
+            <tr>
+                <td width="30%">
+                    @obj.Name
+                </td>
+                <td width="30%">
+                    @obj.Village
+                </td>
+                <td width="40%">
+                    @obj.Adhar
+              
+                </td>
+        
+            </tr>
+       
+        }
+    </body>
+    </table>
+   

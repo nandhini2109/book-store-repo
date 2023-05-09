@@ -1,0 +1,41 @@
+﻿@model MyNyc
+@{
+    ViewData["Title"] = "Edit";
+}
+
+<h1>Edit</h1>
+<body style=" background-color :goldenrod">
+
+
+    <form method="post" asp-controller="Nyc" asp-action="Edit">
+        <div class="mb-3">
+            <lable class="form-label">Username</lable>
+            <input type="number" class="form-control" asp-for="Username" />
+
+            <lable class="form-label">Password</lable>
+            <input type="password" class="form-control" asp-for="Password" />
+
+            <div class="mb-3">
+                <lable for="for">Name</lable>
+                <input type="text" class="form-control" asp-for="Name" />
+            </div>
+
+            <lable class="form-label">Location</lable>
+            <input type="float" class="form-control" asp-for="Location" />
+
+        </div>
+
+        <div class="mb-3">
+            <button type="submit" class="btn btn-primary" me-3>edit</button>
+
+
+
+        </div>
+        <div class="mb-3">
+            <button type="submit" class="btn btn-primary" me-3>Update</button>
+            <a class="btn btn-primary" asp-controller="Nyc" asp-action="Index"> Back to index page </a>
+
+        </div>
+    </form>
+</body>
+

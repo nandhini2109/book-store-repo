@@ -1,0 +1,76 @@
+﻿@model MyIndians
+@{
+    ViewData["Title"] = "Indians";
+}
+
+<h1> Welcome to Indians page</h1>
+
+<body style=" background-color :turquoise">
+
+
+    <form method="post" asp-controller="Indians" asp-action="Add">
+        <div class="mb-3">
+            <lable class="form-label">Name</lable>
+            <input type="text" class="form-control" asp-for="Name" />
+            
+
+                <lable class="form-label">UserName</lable>
+                <input type="text" class="form-control" asp-for="UserName" />
+
+
+
+            <lable class="form-label">Password</lable>
+            <input type="password" class="form-control" asp-for="Password" />
+
+
+            <lable class="form-label">Date of Birth</lable>
+            <input type="date" class="form-control" asp-for="DOB" />
+
+       
+
+            <div class="mb-3">
+
+                <label for="123">Indian</label>
+                <input type="checkbox" id="123" asp-for="Indian" />
+            </div>
+
+            <div class="mb-3">
+                <label class="form-label" id="12">Account verified</label>
+                <input type="checkbox" for="12" asp-for="AccountVerified" />
+            </div>
+
+            <div class="mb-3">
+                <label class="form-label" id="CDT">Created Date Time</label>
+                <input type="datetime-local" class="form-control" for="CDT" asp-for="CreatedDateTime" />
+            </div>
+
+            <div class="mb-3">
+                <label for="location">Location</label>
+
+                <select name="location" id="location" asp-for="Location">
+                    <option value="Hyderabad">Hyderabad</option>
+                    <option value="Mumbai">Mumbai</option>
+                    <option value="Gujarath">Gujarath</option>
+                    <option value="Bangalore">Bangalore</option>
+                </select>
+            </div>
+            <lable class="form-label">Height</lable>
+            <input type="text" class="form-control" asp-for="Height" />
+
+            <div class="mb-3">
+                <label class="form-label" id="LUDT">Last Updated Date Time</label>
+                <input type="datetime-local" class="form-control" for="LUDT" />
+            </div>
+  
+
+        </div>
+
+        <div class="mb-3">
+            <button type="submit" class="btn btn-primary" me-3>Add</button>
+            <a class="btn btn-primary" asp-controller="Category" asp-action="Index"> </a>
+
+        </div>
+    </form>
+</body>
+
+

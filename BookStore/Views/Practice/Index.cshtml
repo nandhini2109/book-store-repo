@@ -1,0 +1,60 @@
+﻿@model IEnumerable<MyPractice>
+@{
+    
+    ViewData["Title"] = "Practice";
+}
+
+    <h1> My Practice Page</h1>
+<div align="right"><a class="btn btn-primary" asp-controller="Practice" asp-action="Add"><img src="/Icons/Add.png">Add</a></div>
+
+   
+    <table class="table table-bordered table-striped" style="width:100%">
+    <thead>
+        <tr>
+            <th style=" background-color:azure">
+               Id
+            </th>
+            <th style=" background-color:azure">
+               Name
+            </th>
+            <th style=" background-color:azure">
+              Indian
+             </th>
+            <th style=" background-color:azure">
+              Height
+            </th>
+        </tr>
+    </thead>
+    <body style=" background-color:aqua">
+        @foreach(var obj in Model)
+        {
+        <tr>
+            <td width="15%">
+                    @obj.Id
+
+            </td>
+            <td width="15%">
+                    @obj.Name
+            </td>
+
+            <td width="15%">
+                    @obj.Indian
+            </td>
+
+            <td width="15%">
+                    @obj.Height
+            </td>
+
+            <td>
+                <a class="btn " asp-controller="Practice" asp-action="Edit" asp-route-id="@obj.Id"><img src="/Icons/Add.png">Edit</a>
+               <a class="btn " asp-controller="Practice" asp-action="Delete" asp-route-id="@obj.Id"><img src="~/Icons/Reyansh.png" />Delete</a>
+             
+            </td>
+
+        </tr>
+        }
+    </body>
+</table>
+<div>The result count is @Model.Count()</div>
+  
+

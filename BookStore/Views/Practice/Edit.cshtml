@@ -1,0 +1,69 @@
+﻿@model MyPractice
+@{
+    ViewData["Title"] = "Edit";
+}
+
+<h1>Edit</h1>
+  
+
+
+<body style=" background-color :greenyellow">
+
+
+    <form method="post" asp-controller="Practice" asp-action="Edit">
+        <div class="mb-3">
+            <lable class="form-label">Id</lable>
+            <input type="number" class="form-control" asp-for="Id" />
+           
+            <lable class="form-label">Name</lable>
+            <input type="text" class="form-control" asp-for="Name" />
+
+            <div class="mb-3">
+                <lable for="for">Indian</lable>
+                <input type="checkbox" id="for" asp-for="Indian" />
+            </div>
+
+            <lable class="form-label">Height</lable>
+            <input type="float" class="form-control" asp-for="Height" />
+
+        </div>
+
+        <div class="mb-3">
+            <button type="submit" class="btn btn-primary" me-3>edit</button>
+           
+
+
+        </div>
+    </form>
+</body>
+
+
+@*
+    <form method="post" asp-controller="Practice" asp-action="Edit">
+        <div class="mb-3">
+            <lable class="form-label">Name</lable>
+            <input type="text" class="form-control" asp-for="Name" />
+     
+
+            <div class="mb-3">
+                <lable class="form-label">Id</lable>
+                <input type="number" class="form-control" asp-for="Id" />
+            </div>
+            <div class="mb-3">
+                <lable for="for">Indian</lable>
+                <input type="checkbox" id="for" asp-for="Indian" />
+            </div>
+            <div class="mb-3">
+                <lable class="form-label">Height</lable>
+                <input type="float" class="form-control" asp-for="Height" />
+             
+            </div>
+            <div class="mb-3">
+            
+                <button type="submit" class="btn btn-primary" me-3>Edit</button>
+                
+            </div>
+        </div>
+    </form>
+</body>
+*@

@@ -1,0 +1,33 @@
+﻿
+@{
+    ViewData["Title"] = "Add";
+}
+
+@model Category
+
+<body style=" background-color :turquoise">
+
+<h1>Add Category Iteam </h1>
+<div asp-validation-summary="All"></div>
+<form method="post" asp-controller="Category" asp-action="Add">
+    <div class="mb-3">
+        <lable class="form-label">Name</lable>
+        <input type="text" class="form-control" asp-for="Name" />
+        <span asp-validation-for="Name" class="text-danger"></span>
+        <lable class="form-label">DisplayOrder</lable>
+        <input type="text" class="form-control" asp-for="DisplayOrder" />
+        <span asp-validation-for="DisplayOrder" class="text-danger"></span>
+    </div>
+
+    <div class="mb-3">
+        <button type="submit" class="btn btn-primary" me-3>Add</button>
+        <a class="btn btn-primary" asp-controller="Category" asp-action="Index"> Back to index page </a>
+
+
+
+    </div>
+</form>
+</body>
+
+
+

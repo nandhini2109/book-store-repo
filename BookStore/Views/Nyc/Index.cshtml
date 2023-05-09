@@ -1,0 +1,43 @@
+﻿@model IEnumerable<MyNyc>
+
+@{
+    ViewData["Title"] = "Nyc";
+}
+<h1>Nyc Lottery</h1>
+
+<div class="text-right">
+    <a class="btn btn-primary" asp-controller="Nyc" asp-action="Add">
+        <img src="/Icons/Add.png" alt="Add">
+        Add
+    </a>
+</div>
+
+<table class="table table-bordered table-striped">
+    <thead>
+        <tr>
+            <th style="background-color: azure">Username</th>
+            <th style="background-color: azure">Password</th>
+            <th style="background-color: azure">Name</th>
+            <th style="background-color: azure">Location</th>
+            <th></th>
+        </tr>
+    </thead>
+    <tbody style="background-color: aqua">
+        @foreach (var obj in Model)
+        {
+            <tr>
+                <td>@obj.Username</td>
+                <td>@obj.Password</td>
+                <td>@obj.Name</td>
+                <td>@obj.Location</td>
+                <td>
+                    <a class="btn" asp-controller="Nyc" asp-action="Edit" asp-route-id="@obj.Id">
+                        <img src="/Icons/Add.png" alt="Edit">
+                        Edit
+                    </a>
+                </td>
+            </tr>
+        }
+    </tbody>
+</table>
+<div>The result count is @Model.Count()</div>

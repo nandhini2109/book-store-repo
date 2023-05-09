@@ -1,0 +1,62 @@
+﻿@model MySchool
+
+@{  
+    ViewData["Title"] = "School";
+}
+
+<h1> Welcome to School page</h1>
+<body style=" background-color :bisque">
+
+    
+    <form method="post" asp-controller="School" asp-action="Add">
+        
+    <div class="mb-3">
+        <label class="form-label">StudentID</label>
+        <input type="text"  class="form-control" asp-for="StudentID">
+    </div>
+
+    <div class="mb-3">
+        <label class="form-label">First name</label>
+        <input type="text"  class="form-control"asp-for="Firstname">
+    </div>
+
+        <div class="mb-3">
+            <label class="form-label">Surname</label>
+            <input type="text" class="form-control" asp-for="Surname">
+        </div>
+        <div class="mb-3">
+            <label class="form-label">Age</label>
+            <input type="text" class="form-control" asp-for="Age">
+        </div>
+        <div class="mb-3">
+            <label class="form-label">Gender</label>
+            <input type="text" class="for-control" asp-for="Gender">
+        </div>
+        <div class="mb-3">
+            <label class="form-label">Telephno</label>
+            <input type="text" class="form-control" asp-for="Telephone">
+        </div>
+        <div class="mb-3">
+            <label class="form-label">Adress</label>
+            <input type="text" class="form-control" asp-for="Address">
+        </div>
+        <div class="mb-3">
+            <label class="form-label">Email</label>
+            <input type="email" class="form-control" asp-for="Email">
+        </div>
+        <div class="mb-3">
+            <label class="form-label">Gaurdian</label>
+            <input type="text" class="form-control" asp-for="Guardian">
+
+      </div>
+
+        <div class="mb-3">
+            <button type="submit" class="btn btn-primary" me-3>Add</button>
+
+            <a class="btn btn-primary" asp-controller="MySchool" asp-action="Index"> Back to index page </a>
+
+
+
+        </div>
+   </form>
+   </body>
